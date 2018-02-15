@@ -1,6 +1,6 @@
 function git_remote_stash_push
     set tmp_branch 'wip'
-    git stash push
+    git stash push --include-untracked
     set current_commit (git rev-parse HEAD)
     set current_branch (git rev-parse --abbrev-ref HEAD)
     echo $current
