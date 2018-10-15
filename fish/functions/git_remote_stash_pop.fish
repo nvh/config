@@ -1,4 +1,6 @@
 function git_remote_stash_pop
+    set git_root (git rev-parse --show-toplevel)
+    cd $git_root
     set tmp_branch 'wip'
     git pull
     set current_branch (git rev-parse --abbrev-ref HEAD)

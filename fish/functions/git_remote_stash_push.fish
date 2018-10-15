@@ -1,4 +1,6 @@
 function git_remote_stash_push
+    set git_root (git rev-parse --show-toplevel)
+    cd $git_root
     set tmp_branch 'wip'
     git stash push --include-untracked
     set current_commit (git rev-parse HEAD)
